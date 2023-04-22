@@ -11,7 +11,7 @@ let arr2 = arr;
 
 Answer the following with reason after going through the above code:
 
-- `[10] === [10]` //true
+- `[10] === [10]` //false
 - What is the value of obj? // { surname: 'Stark' }
 - `obj == newObj`//false
 - `obj === newObj`//false
@@ -36,7 +36,7 @@ var person2 = personDetails(person1);
 console.log(person1);
 console.log(person2);
 ```
-// { name: 'Alex', age: 30 } - person1
+// { name: 'Alex', age: 25 } - person1
 //{ name: 'John', age: 50 }  -person2
 3. What will be the output of the below code:
 
