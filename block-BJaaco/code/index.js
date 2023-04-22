@@ -35,8 +35,13 @@ for (let collect of collection){
     times(5); // ['test', 'test', 'test', 'test', 'test']
 */
 
-function times(number , string) {
-  
+function times(noOfTimes , character = "test") {
+  if (noOfTimes < 1) return [];
+  let final = [];
+  for ( let i = 0 ; i < noOfTimes ; i++){
+ final.push(character);
+  }
+  return final;
 }
 
 // Uncomment the code below and test the output
@@ -59,8 +64,12 @@ function times(number , string) {
     revert(['Ryan', 'John', 'Bran']); //['Bran', 'John', 'Ryan']
 */
 
-function revert() {
-  // your code
+function revert(arr) {
+  let final = [];
+  for  (let i = arr.length - 1; i >= 0 ; i--){
+    final.push(arr[i])
+  }
+  return final;
 }
 
 // Uncomment the code below and test the output
@@ -80,9 +89,20 @@ function revert() {
     clear(['a', undefined, 'd', 0,  'c', 'b']); // ['b', 'c', 'd', 'a']
     clear(['Ryan', null, 0,  'John', 'Bran']); //['Bran', 'John', 'Ryan']
 */
-
-function clear() {
-  // your code
+function isUnwanted(value){
+ return(
+  value == false || value ==undefined || value == "" || value ==0 || value == null
+ )
+}
+ 
+function clear(arr) {
+  let final = [];
+  for (let value of arr){
+    if (!isUnwanted(value)){
+      final.push(value);
+    }
+  }
+  return final;
 }
 
 // Uncomment the code below and test the output
@@ -104,8 +124,12 @@ function clear() {
     arrayToObj(['Ryan', 'John']); // {0: 'Ryan', 1: 'John'}
 */
 
-function arrayToObj() {
-  // your code
+function arrayToObj(arr) {
+  let final ={} ;
+  for (let i = 0 ; i < arr.length ; i++){
+    final[i]  = arr[i];
+  }
+  return final;
 }
 
 // Uncomment the code below and test the output
